@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+<html>
+<head>
+    <title> Contact Page</title>
+</head>
+<body>
+{% block content %}
+    <style>
+    ul{
+        list-style-type:none;
+    }
+    li{
+        float: none;
+        list-style-type: none;
+        margin-top:1px;
+    }
+    h1{
+        font-size: 50px;
+        font-style: revert;
+    }
+
+    </style>
+
+
+    <center><h1>Contact Us</h1></center>
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-3 col-md-6">
+            <form method="POST">
+            {% csrf_token %}
+            {{ cform }}<br>
+                <center>
+                <input type="submit" value="Submit" class="btn btn-success">
+                <input type="reset" value="Clear" class="btn btn-danger"><br><br><br><br>
+                </center>
+            </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>

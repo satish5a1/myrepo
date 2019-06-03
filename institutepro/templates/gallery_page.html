@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+<html>
+<head>
+    <title>Gallery Page</title>
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+  <script type="javascript" src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+</head>
+
+<body>
+{% block content %}
+    <style>
+    .container img{
+        filter: grayscale(100);
+        transition: 1.3s;
+    }
+    .container img:hover{
+        filter:grayscale(0);
+        transform: scale(1.1);
+    }
+    </style>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{% static 'images/1.jpg' %}" data-lightbox="container"><img src="{% static 'images/1.jpg' %}"style="width: 100%;"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% static 'images/3.jpg' %}" data-lightbox="container"><img src="{% static 'images/3.jpg' %}"style="width: 100%;"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% static 'images/1.jpg' %}" data-lightbox="container"><img src="{% static 'images/1.jpg' %}"style="width: 100%;"></a>
+            </div>
+            <br><br>
+
+
+        </div>
+    </div>
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,104 @@
+{%  load staticfiles %}
+<html>
+<head>
+    <title> Satish Technologies </title>
+    <link rel = "icon" type = "image/png" href = "{% static 'images/titlelogo.png' %}">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/team.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer-distributed.css' %}">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+<style>
+    #name1{
+        font-size: 30px;
+        font-family: cursive;
+        text-shadow: 2px 2px darkslategray;
+    }
+
+    #ul1 {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+    }
+    #l11{
+        float: left;
+        list-style-type: none;
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+    li a{
+        display: block;
+        color: white;
+        text-align: center;
+        padding-top: 40px;
+        padding-left: 10px;
+        padding-right: 30px;
+
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    li a:hover{
+        transform: scale(1.2);
+        color: white;
+        text-decoration: none;
+    }
+
+    #h11{
+        font-size: 50px;
+        text-shadow: 3px 3px 3px darkslategray;
+        margin-top: -5px;
+
+    }
+    #a11{
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+    body{
+        background-color: aliceblue;
+    }
+    .footer-distributed{
+        background-color: black;
+    }
+</style>
+<body>
+
+<ul id="ul1">
+
+    <li id="l11"><a id="a11" href="/home/"> <img src="{% static 'images/logo.png' %}"></a></li>
+    <li id="l11"><a href="/home/" class="active">Home</a></li>
+    <li id="l11"><a href="/contact/">Contact</a></li>
+    <li id="l11"><a href="/courses/">Courses</a></li>
+    <li id="l11"><a href="/feedback/">FeedBack</a></li>
+    <li id="l11"><a href="/team/">Our Team</a></li>
+    <li id="l11"><a href="/gallery/">Gallery</a></li>
+</ul>
+{% block content %}
+{% endblock %}
+<footer class="footer-distributed">
+    <div class="footer-right">
+
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+				<a href="#"><i class="fa fa-github"></i></a>
+
+			</div>
+
+			<div class="footer-left">
+                <p>Copyright © 2019 Satish Technologies Ltd. All rights reserved.</p>
+			</div>
+
+</footer>
+</body>
+</html>
